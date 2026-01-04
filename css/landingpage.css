@@ -148,7 +148,7 @@
 
 /* whole logging section */
 
-@media only screen and (min-width:1080px) and (max-width: 1864px) {
+@media only screen and (min-width:1080px) and (max-width: 2864px) {
     .header-logging {
         align-items: center;
         flex-direction: row;
@@ -203,7 +203,7 @@
     width: 464px;
 }
 
-@media only screen and (min-width:1080px) and (max-width: 1864px) {
+@media only screen and (min-width:1080px) and (max-width: 2864px) {
     .left-logging-header {
         margin-right: -65px;
     }
@@ -332,7 +332,7 @@
     }
 }
 
-@media only screen and (min-width:680px) and (max-width: 1864px) {
+@media only screen and (min-width:680px) and (max-width: 2864px) {
     .scrollable-navabar-header {
         align-items: center;
         border-bottom: 2px solid rgb(var(--color-swan-always-light));
