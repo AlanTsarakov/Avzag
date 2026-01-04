@@ -382,7 +382,7 @@
     margin-bottom: -40px;
   }
 }
-@media only screen and (min-width: 680px) and (max-width: 1864px) {
+@media only screen and (min-width: 680px) and (max-width: 2864px) {
   .scrollable-navabar-header {
     align-items: center;
     border-bottom: 2px solid rgb(var(--color-swan-always-light));
