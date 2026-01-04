@@ -48,6 +48,10 @@ const setIndexSiteLanguage = (path, language) => {
 
 }
 
+const signupButtonAnimation = () => {
+    window.location.href = "html/signup.html";
+}
+
 translateLanguage = localStorage.getItem("translateLanguage")
 if (translateLanguage != undefined) {
     setIndexSiteLanguage(`assets/JSON/landing-${translateLanguage}.json`, translateLanguage)
