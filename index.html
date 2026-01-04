@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/landingpage.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="./js/landingpage.js" defer></script>
+    <title>Авзаг</title>
+    <link rel="icon" href="./assets/images/avzag-logo.svg" />
+  </head>
+  <body>
+    <header class="landing-header">
+      <!-- //navbar in landing page -->
+      <div class="header-navbar">
+        <nav class="landing-navbar">
+          <a>
+            <img
+              alt="Duolingo"
+              class="landing-header-logo"
+              src="./assets/svg/duolingo-green-text-only.svg"
+            />
+          </a>
+          <div class="select-site-language">
+            <button class="site-language-button">
+              <span id="site-language"> </span>
+              <img
+                alt=" "
+                class="site-language-select-dropdown"
+                src="./assets/svg/site-language-select-dropdown.svg"
+              />
+            </button>
+            <div class="hover-site-language">
+              <ul class="site-language-unordered-list">
+                <li class="site-language-list-single">
+                  <a
+                    class="country-name-flag-language"
+                    onclick="setIndexSiteLanguage('assets/JSON/landing-german.json','german')"
+                    ><img
+                      class="country-flag-language-selection"
+                      src="./assets/svg/country-flags/de-flag.svg"
+                    />
+                    Осетинский</a
+                  >
+                </li>
+                <li class="site-language-list-single">
+                  <a
+                    class="country-name-flag-language"
+                    onclick="setIndexSiteLanguage('assets/JSON/landing-english.json','english')"
+                    ><img
+                      class="country-flag-language-selection"
+                      src="./assets/images/english.png"
+                    />
+                    Русский</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- content below navbar -->
+      <div class="header-logging">
+        <div class="left-logging-header" id="left-logging-header">
+          <img src="assets/svg/bars-landingpage-1.svg" width="370px" height="370px" alt="">
+        </div>
+        <div class="right-logging-header">
+          <h1 id="header-text"></h1>
+          <div class="right-logging-button-section">
+            <div class="get-started-btn-div">
+              <button
+                class="logging-get-started-button button-div"
+                onclick="getStartedButtonAnimation();"
+                id="get-started-button"
+              >
+                <span id="get-started-text"></span>
+              </button>
+            </div>
+            <div class="already-have-account-btn-div">
+              <button
+                class="logging-already-have-account-button button-div"
+                onclick="alreadyAccountButtonAnimation();"
+                id="already-have-account-button"
+              >
+                <span id="already-have-account-text"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- scrollable navbar -->
+
+      <script>
+        const countriesList = document.querySelector(".countries-list");
+        const itemsToShow = 7;
+        const itemsToScroll = 2;
+        let currentIndex = 0;
+
+        function scrollNavbar(direction) {
+          const itemWidth = countriesList.firstElementChild.offsetWidth + 10; // 10 is the gap between items
+
+          if (direction === "left" && currentIndex > 0) {
+            currentIndex -= itemsToScroll;
+          } else if (
+            direction === "right" &&
+            currentIndex < countriesList.children.length - itemsToShow
+          ) {
+            currentIndex += itemsToScroll;
+          }
+
+          countriesList.style.transform = `translateX(-${
+            currentIndex * itemWidth
+          }px)`;
+        }
+      </script>
+    </header>
+    <!-- section below scrollable navbar -->
+    <section class="duolingo-features">
+      <section class="feature-class features-column">
+        <div class="duolingo-features-text">
+          <h2 class="duolingo-features-text-head" id="feature-head-1"></h2>
+          <p class="duolingo-features-text-body">
+            <span id="feature-body-1"></span>
+          </p>
+        </div>
+        <div
+          id="duolingo-feature-animation-free-fun-effective"
+          class="duolingo-feature-animation"
+        >
+        <img src="assets/svg/1.svg" width="370px" height="370px" alt="">
+      </div>
+      </section>
+
+      <section class="feature-class features-column-reverse">
+        <div
+          id="duolingo-feature-animation-backed-by-science"
+          class="duolingo-feature-animation"
+        >
+        <img src="assets/svg/2.svg" width="370px" height="370px" alt="">
+      </div>
+        <div class="duolingo-features-text">
+          <h2 class="duolingo-features-text-head" id="feature-head-2"></h2>
+          <p class="duolingo-features-text-body">
+            <span id="feature-body-2"></span>
+          </p>
+        </div>
+      </section>
+      <section class="feature-class features-column">
+        <div class="duolingo-features-text">
+          <h2 class="duolingo-features-text-head" id="feature-head-3"></h2>
+          <p class="duolingo-features-text-body">
+            <span id="feature-body-3"></span>
+          </p>
+        </div>
+        <div
+          id="duolingo-feature-animation-stay-motivated"
+          class="duolingo-feature-animation"
+        ><img src="assets/svg/3.svg" width="370px" height="370px" alt=""></div>
+      </section>
+      <section class="feature-class features-column-reverse">
+        <div
+          id="duolingo-feature-animation-personalised-learning"
+          class="duolingo-feature-animation"
+        ><img src="assets/svg/4.svg" width="370px" height="370px" alt=""></div>
+        <div class="duolingo-features-text">
+          <h2 class="duolingo-features-text-head" id="feature-head-4"></h2>
+          <p class="duolingo-features-text-body">
+            <span id="feature-body-4"></span>
+          </p>
+        </div>
+      </section>
+    </section>
+    <!-- landing page floating with get statrted button -->
+    <section class="floating-landing-page">
+      <div class="floating-footer">
+        <div class="footer-get-started-section">
+          <h1 class="footer-get-started-heading" id="float-heading"></h1>
+          <div class="floating-get-started-button">
+            <div class="get-started-btn-div">
+              <button
+                class="logging-get-started-button button-div"
+                onclick="getStartedButtonAnimation();"
+                id="get-started-button"
+              >
+                <span id="bottom-get-started-text"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="floating-animation">
+          <div id="phone-animation"></div>
+        </div>
+      </div>
+    </section>
+    <div class="lastDiv">
+      <div class="divInLastDiv">
+        <div class="containList">
+          <div class="list-head">
+            <div class="headings">
+              <div>
+                <div class="mainHeading" id="aboutUs">О нас</div>
+                <ul>
+                  <li>
+                    <a href="">Курсы</a>
+                  </li>
+                  <li><a href="">Цель</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./js/pointerpage.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.7/lottie.min.js"></script>
+</html>
