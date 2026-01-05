@@ -19,6 +19,7 @@ let xpFromLesson = parseInt(localStorage.getItem("xpCount"));
 let newHearts = parseInt(localStorage.getItem("hearts"));
 
 
+
 isNaN(xpFromLesson) ? xpFromLesson = -2 : 0
 isNaN(newHearts) ? newHearts = 0 : 0
 
@@ -43,6 +44,7 @@ if (xpFromLesson > -1) {
 
     await updateDoc(dbref,userData);
     sessionStorage.setItem("user-info", JSON.stringify(userData));
+    localStorage.setItem("gems", parseInt(userData.gems))
     localStorage.removeItem("xpCount");
     setTimeout(()=>location.reload(),300)
 }
