@@ -157,7 +157,7 @@ body {
 }
 
 .inner-green-bar {
-    background-color: #58cc02;
+    background-color: #ebb30d;
     min-width: 0;
     width: 0;
     transition: width .5s;
@@ -926,7 +926,7 @@ body {
 }
 
 .check-button-outer-active {
-    box-shadow: 0 4px 0#58a700;
+    box-shadow: 0 4px 0#816205;
     border-radius: 18px
 }
 
@@ -940,7 +940,7 @@ body {
     font-size: 17px;
     border: 0;
     cursor: pointer;
-    background-color: #58cc02;
+    background-color: #ebb30d;
     color: #fff
 }
 
@@ -1198,7 +1198,8 @@ body {
 }
 
 .inner-xp-container img {
-    margin-right: 10px
+    margin-right: 10px;
+    height: 30px;
 }
 
 .exit-overlay,

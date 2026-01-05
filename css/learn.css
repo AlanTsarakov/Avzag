@@ -279,21 +279,20 @@ section {
   border: none;
   border-radius: 50%/50%;
   z-index: 0;
-  background: rgb(var(--color-owl));
+  background: #f0b400;
   box-shadow: 0 5px 0 rgb(var(--color-black), 0.2),
-    0 5px 0 rgb(var(--color-owl));
+    0 5px 0 #684f03;
 }
 .lesson-button:hover {
-  background: rgb(var(--color-owl), 0.8);
+  background: rgb(#dba605, 0.8);
   cursor: pointer;
 }
 .star-image {
   height: 75px;
-    left: -3px;
-    position: absolute;
-    top: -1px;
-    width: 75px;
-    filter: drop-shadow(2px 4px 6px black);
+  left: -3px;
+  position: absolute;
+  top: -5px;
+  width: 75px;
 }
 circle-progress {
   position: absolute;
@@ -329,7 +328,7 @@ circle-progress::part(value) {
 }
 .floating-start-box .text {
   background-color: #ffc20c;
-  color: rgb(var(--color-swan));
+  color: white;
   font-family: din-round-bold;
   font-size: 17px;
   font-weight: 700;
@@ -508,6 +507,19 @@ circle-progress::part(value) {
     left: -55%;
     z-index: -1;
   }
+  .faq-header img {
+    left: calc(40% - 10px);
+  }
+  .sidebar-buttons {
+    position: sticky;
+    bottom: 0;
+    background-color: rgb(var(--color-snow));
+    border-top: 2px solid rgb(var(--color-swan));
+    padding: 15px;
+    margin-top: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
   .section-container {
   z-index: 1;
   }
@@ -545,16 +557,6 @@ circle-progress::part(value) {
     color: rgb(var(--color-snow));
   }
 
-  .sidebar-buttons {
-    position: sticky;
-    bottom: 0;
-    background-color: rgb(var(--color-snow));
-    border-top: 2px solid rgb(var(--color-swan));
-    padding: 15px;
-    margin-top: 10px;
-    flex-direction: row;
-    justify-content: space-between;
-  }
   .section-name-header img:first-child {
     display: none;
   }

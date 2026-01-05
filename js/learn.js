@@ -173,7 +173,6 @@ const placeUnitsandLessons = (sectionData, userData) => {
   let onProgressHtml = `
 <div class="circle_box">
   <button class="lesson-button" onclick="openDialogBoxes(event);">
-    <img src="../assets/svg/pirog.svg" class="star-image">
     <img src="../assets/svg/star-in-lesson-white.svg" class="star-image">
     <circle-progress value="0" max="100" text-format="none" ></circle-progress>
   </button>
@@ -189,13 +188,12 @@ const placeUnitsandLessons = (sectionData, userData) => {
   <div class="text-container">
     <h1>Form basic sentences</h1>
     <p>Урок ${userData.currentLesson} из 4</p>
-    <button onclick="startLesson()">Start +10 XP</button>
+    <button onclick="startLesson()">Начать +10 XP</button>
   </div>
 </div>`
 
   let lockedDiv = `<div class="circle_box locked">
 <button class="lesson-button inactive" onclick="openDialogBoxes(event);">
-  <img src="../assets/svg/pirog.svg" class="star-image">
   <img src="../assets/svg/locked-button-grey.svg" class="star-image">
 </button>
 </div>
@@ -213,7 +211,6 @@ const placeUnitsandLessons = (sectionData, userData) => {
     class="lesson-button inactive"
     onclick="openDialogBoxes(event);"
   >
-    <img src="../assets/svg/pirog.svg" class="star-image">
     <img
       src="../assets/svg/correct-tick-unit-completed.svg"
       class="star-image"
@@ -223,9 +220,9 @@ const placeUnitsandLessons = (sectionData, userData) => {
 <div class="floating-start-box-bottom hidden completed">
   <div class="triangle-top"></div>
   <div class="text-container">
-    <h1>Form basic sentences</h1>
-    <p>You completed this level!</p>
-    <button>Completed</button>
+    <h1>Базовые предложения</h1>
+    <p>Вы завершили этот уровенб!</p>
+    <button>Выполнено</button>
   </div>
 </div>`
 

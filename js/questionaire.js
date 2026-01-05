@@ -305,11 +305,11 @@ let lessonComplete = () => {
 
     let appreciationHead = document.createElement('div');
     appreciationHead.className = 'appreciation-head';
-    appreciationHead.textContent = 'Lesson Complete';
+    appreciationHead.textContent = 'Урок закончен';
 
     let appreciationBody = document.createElement('div');
     appreciationBody.className = 'appreciation-body';
-    appreciationBody.textContent = 'You have completed this lesson';
+    appreciationBody.textContent = 'Вы успешно прошли этот уровень';
 
     let lessonStatsContainer = document.createElement('div');
     lessonStatsContainer.className = 'lesson-stats';

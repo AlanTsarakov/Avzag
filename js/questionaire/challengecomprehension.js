@@ -47,6 +47,11 @@ let challengeReadComprehension = (question) => {
     speakerInner.classList.add('speaker-inner');
     speakerInner.id = 'speaker-inner';
     speakerOuter.appendChild(speakerInner);
+    let speakerImg = document.createElement("img");
+    speakerImg.style.height = "20px";
+    speakerImg.style.width = "20px";
+    speakerImg.src = "../assets/svg/volume.svg";
+    speakerInner.appendChild(speakerImg);
 
     let comprehensionQuestion = document.createElement('div');
     comprehensionQuestion.classList.add('comprehension-question');

@@ -57,4 +57,3 @@ function calcDiamond(){
   sessionStorage.setItem("user-info",JSON.stringify(userData));
   placeuserStatistics();
 }
-myButton.addEventListener('click',calcDiamond);
